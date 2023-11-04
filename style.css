@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.startt ul {
+    display: flex;
+    list-style: none;
+    font-size: 35px;
+}
+
+.startt li {
+    padding: 24px;
+
+}
+
+.startt {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(75, 74, 74);
+    color: white;
+}
+
+.startt li:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.splitview {
+    position: relative;
+    width: 100%;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel .content {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    color: #FFF;
+}
+
+.panel .description {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.panel img {
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.bottom {
+    background-color: rgb(62, 59, 59);
+    z-index: 1;
+}
+
+.bottom .description {
+    right: 5%;
+}
+
+.top {
+    background-color: rgb(44, 41, 41);
+    z-index: 2;
+    width: 50vw;
+
+
+}
+
+.top .description {
+    left: 5%;
+}
+
+
+.handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(253, 171, 0);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 75%;
+    }
+}
+
+
+.gallery {
+  --s: 250px; /* the size */
+  
+  display: grid;
+  transform-style: preserve-3d;
+  --_p: perspective(calc(2.5*var(--s)));
+  animation: r 9s infinite cubic-bezier(.5,-0.5,.5,1.5);
+}
+.gallery img {
+  grid-area: 1/1;
+  width: var(--s);
+  aspect-ratio: 1;
+  object-fit: cover;
+  transform: var(--_t,) translateZ(calc(var(--s)/2));
+}
+.gallery img:nth-child(2) {--_t: rotateX(-90deg)}
+.gallery img:nth-child(3) {--_t: rotateY( 90deg)}
+.gallery img:nth-child(4) {--_t: rotateX(180deg) rotate( 90deg)}
+.gallery img:nth-child(5) {--_t: rotateX( 90deg)}
+.gallery img:nth-child(6) {--_t: rotateY(-90deg)}
+
+@keyframes r {
+  0%,3%   {transform: var(--_p) rotate3d(0, 0, 0, 0deg)}
+  14%,19% {transform: var(--_p) rotate3d(-1, 1, 0, 180deg)}
+  31%,36% {transform: var(--_p) rotate3d(0, -1, 0, 90deg)}
+  47%,52% {transform: var(--_p) rotate3d(1, 0, 0, 90deg)}
+  64%,69% {transform: var(--_p) rotate3d(1, 0, 0, -90deg)}
+  81%,86% {transform: var(--_p) rotate3d(0, 1, 0, 90deg)}
+  97%,100%{transform: var(--_p) rotate3d(0, 0, 0, 0deg)}
+}
+
+
+.alldiv {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #556270;
+  animation: b 9s infinite;
+}
+
+@keyframes b {
+  0%,3%   {background: #773870}
+  14%,19% {background: #C5E0DC}
+  31%,36% {background: #036564}
+  45%,55% {background: #B38184}
+  64%,69% {background: #424254}
+  81%,86% {background: #4DBCE9}
+  97%,to  {background: #774F38}
+}
+.divvbvvv h2{
+    font-size: 27px;
+    position: relative;
+    top: -130px;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  }
+
+  .swiper-slide img {
+    display: block;
+ width: 500px;
+ height: 500px;
+    object-fit: cover;
+    padding: 55px;
+position: relative;
+left: 33%;
+  }
+  .swiper h2{
+    padding: 25px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .swiper p{
+    padding: 25px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .panel {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+
+.panel .content {
+    position: absolute;
+    width: 100vw;
+    min-height: 45vw;
+    color: #FFF;
+}
+
+.panel .description {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.panel img {
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.bottom {
+    background-color: rgb(62, 59, 59);
+    z-index: 1;
+}
+
+.bottom .description {
+    right: 5%;
+}
+
+.top {
+    background-color: rgb(44, 41, 41);
+    z-index: 2;
+    width: 50vw;
+
+
+}
+
+.top .description {
+    left: 5%;
+}
+
+
+.handle {
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: rgb(253, 171, 0);
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+
+.skewed .handle {
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 75%;
+    }
+}
+.end_div ul{
+    list-style: none;
+    font-size: 40px;
+
+
+}
+.end_div{
+    justify-content: space-between;
+    background: rgb(75, 74, 74);
+    color: white;
+    display: flex;
+}
+.mekkkk ul{
+    display: flex;
+}
+.mekkkk li{
+    padding: 20px;
+}
+.mekkkkkkk li{
+    padding: 20px;
+}
+.mekkkk li:hover{
+    background-color: white;
+    color: black;
+}
